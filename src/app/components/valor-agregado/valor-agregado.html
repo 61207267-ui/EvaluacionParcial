@@ -1,0 +1,92 @@
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-bold mb-2">Herramienta Interactiva</span>
+    <h2 class="fw-bold text-dark display-6">Cotizador de Cursos y Horarios</h2>
+    <p class="text-muted col-md-8 mx-auto">Calcula el costo mensual de tu pensión, consulta turnos disponibles y conoce al docente asignado en segundos.</p>
+  </div>
+
+  <div class="row g-4 justify-content-center">
+    <!-- FORMULARIO DE COTIZACIÓN -->
+    <div class="col-12 col-lg-6">
+      <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <h5 class="fw-bold text-dark mb-4">📋 Selecciona tus opciones</h5>
+        
+        <form>
+          <!-- 1. Selección de Idioma -->
+          <div class="mb-3">
+            <label for="selectIdioma" class="form-label fw-semibold text-secondary">1. Idioma a estudiar</label>
+            <select class="form-select form-select-lg rounded-3 fs-6" id="selectIdioma" (change)="onChangeIdioma($event)">
+              <option value="ingles" selected>🇬🇧 Inglés Progresivo</option>
+              <option value="portugues">🇧🇷 Portugués Intensivo</option>
+              <option value="quechua">🇵🇪 Quechua Intercultural</option>
+              <option value="italiano">🇮🇹 Italiano Profesional</option>
+            </select>
+          </div>
+
+          <!-- 2. Tipo de Alumno -->
+          <div class="mb-3">
+            <label for="selectTipoAlumno" class="form-label fw-semibold text-secondary">2. Condición del estudiante</label>
+            <select class="form-select form-select-lg rounded-3 fs-6" id="selectTipoAlumno" (change)="onChangeTipo($event)">
+              <option value="uc" selected>🎓 Estudiante / Egresado UC (Descuento especial)</option>
+              <option value="general">👤 Público General</option>
+            </select>
+          </div>
+
+          <!-- 3. Turno / Horario -->
+          <div class="mb-4">
+            <label for="selectTurno" class="form-label fw-semibold text-secondary">3. Turno preferido</label>
+            <select class="form-select form-select-lg rounded-3 fs-6" id="selectTurno" (change)="onChangeTurno($event)">
+              <option value="manana" selected>🌅 Mañana (08:00 hrs - 10:00 hrs)</option>
+              <option value="tarde">☀️ Tarde (15:00 hrs - 17:00 hrs)</option>
+              <option value="noche">🌙 Noche (19:00 hrs - 21:00 hrs)</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- TARJETA DE RESULTADO / RESUMEN DE COTIZACIÓN -->
+    <div class="col-12 col-lg-5">
+      <div class="card border-0 shadow rounded-4 p-4 bg-primary text-white h-100 d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-white text-primary fw-bold px-3 py-2 rounded-pill">Resumen de Matrícula</span>
+            <small class="text-white-50">Sede Huancayo / Virtual</small>
+          </div>
+
+          <h3 class="fw-bold mb-1">{{ resumenIdioma }}</h3>
+          <p class="text-white-50 small mb-4">Centro de Idiomas - Universidad Continental</p>
+
+          <hr class="border-white border-opacity-25 my-3">
+
+          <div class="mb-3">
+            <small class="text-white-50 d-block">Docente Asignado:</small>
+            <span class="fw-semibold fs-6">{{ resumenDocente }}</span>
+          </div>
+
+          <div class="mb-3">
+            <small class="text-white-50 d-block">Horario Seleccionado:</small>
+            <span class="fw-semibold fs-6">{{ resumenHorario }}</span>
+          </div>
+
+          <div class="mb-3">
+            <small class="text-white-50 d-block">Modalidad:</small>
+            <span class="fw-semibold fs-6">💻 Clases en Vivo (Virtual Sync)</span>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+          <small class="text-white-50 d-block">Monto Mensual Estimado:</small>
+          <div class="d-flex align-items-baseline gap-2">
+            <span class="display-5 fw-bold">S/ {{ resumenPrecio }}</span>
+            <small class="text-white-50">/ mes</small>
+          </div>
+
+          <a href="https://wa.me/51999999999" target="_blank" class="btn btn-light text-primary fw-bold w-100 rounded-pill mt-3 py-2 shadow-sm">
+            📲 Reservar Vacante por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
