@@ -1,1 +1,37 @@
-<p>header works!</p>
+<header class="bg-dark text-white">
+  <!-- Navbar Responsivo -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">
+        <i class="bi bi-globe me-2"></i>Centro de Idiomas Continental
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#idiomas">Idiomas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#modalidades">Niveles y Modalidades</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-2 text-white px-3" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Hero Principal -->
+  <div class="position-relative p-5 text-center bg-image rounded-0" 
+       [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(' + headerBgImage + ')'"
+       style="background-size: cover; background-position: center; min-height: 420px;">
+    <div class="d-flex justify-content-center align-items-center h-100 py-5">
+      <div class="text-white col-lg-8">
+        <h1 class="display-4 fw-bold mb-3">Aprende Idiomas, Conecta con el Mundo</h1>
+        <p class="lead mb-4 fs-5 fw-light">Formación lingüística integral con los estándares internacionales más altos para impulsar tu desarrollo académico y profesional.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="#idiomas" class="btn btn-primary btn-lg px-4 me-sm-3 fw-semibold">Ver Programas</a>
+          <a href="#modalidades" class="btn btn-outline-light btn-lg px-4">Modalidades</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
