@@ -1,35 +1,117 @@
-<header class="bg-dark text-white">
-  <!-- Navbar Responsivo -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+<header class="bg-dark text-white position-relative overflow-hidden">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary border-opacity-25 sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">
-        <i class="bi bi-globe me-2"></i>Centro de Idiomas Continental
+      <div class="mx-4">
+        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxdKCf5qT6qQ6VWUZxA7xmle4f1h25Af94CIZFvK1DQ&s=10" 
+     alt="Logo de la Universidad Continental" 
+     class="img-fluid" 
+     style="max-width: 50px; height: auto;">
+      </div>
+
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+       
+        <span class="lh-sm">
+          <span class="d-block fw-bold text-white">CENTRO DE IDIOMAS </span>
+          <small class="d-block text-success fs-7 fw-semibold text-uppercase tracking-wider">Continental</small>
+        </span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+
       <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#idiomas">Idiomas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#modalidades">Niveles y Modalidades</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-2 text-white px-3" href="#contacto">Contacto</a></li>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#idiomas">Oferta de Idiomas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#niveles">Niveles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#modalidades">Modalidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#certificaciones">Certificaciones</a>
+          </li>
+
         </ul>
+        <div class="d-flex ms-lg-3 gap-2 mt-3 mt-lg-0">
+          <a href="#matricula" class="btn btn-success fw-semibold rounded-pill px-4 shadow-sm w-100 w-lg-auto">
+            Matricularse
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Banner Hero Principal -->
-  <div class="position-relative p-5 text-center bg-image rounded-0" 
-       [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(' + headerBgImage + ')'"
-       style="background-size: cover; background-position: center; min-height: 420px;">
-    <div class="d-flex justify-content-center align-items-center h-100 py-5">
-      <div class="text-white col-lg-8">
-        <h1 class="display-4 fw-bold mb-3">Aprende Idiomas, Conecta con el Mundo</h1>
-        <p class="lead mb-4 fs-5 fw-light">Formación lingüística integral con los estándares internacionales más altos para impulsar tu desarrollo académico y profesional.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="#idiomas" class="btn btn-primary btn-lg px-4 me-sm-3 fw-semibold">Ver Programas</a>
-          <a href="#modalidades" class="btn btn-outline-light btn-lg px-4">Modalidades</a>
+  <!-- Hero Header Visual (Sin Imágenes Externas) -->
+  <div class="hero-header-bg py-5 py-lg-6 position-relative">
+    <!-- Círculos luminosos de fondo -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <div class="container position-relative z-1 py-4 py-lg-5">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="badge bg-primary bg-opacity-25 text-info border border-info border-opacity-25 rounded-pill px-3 py-2 mb-3 fs-7 fw-semibold">
+             Admisión Abierta 2026 - Nuevos Inicios
+          </span>
+          <h1 class="display-3 fw-black text-white lh-sm mb-3">
+            Aprende idiomas, <span class="gradient-text">conecta con el mundo</span>
+          </h1>
+          <p class="lead text-light text-opacity-75 mb-4 fs-5 me-lg-4">
+            Domina el inglés, portugués, italiano y quechua con metodologías interactivas y certificaciones internacionales.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <a href="#idiomas" class="btn btn-primary btn-lg fw-semibold rounded-pill px-4 py-3 shadow">
+              Explorar Idiomas <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="#modalidades" class="btn btn-outline-light btn-lg fw-semibold rounded-pill px-4 py-3">
+              Ver Modalidades
+            </a>
+          </div>
+
+          <!-- Métricas en Header -->
+          <div class="row g-3 mt-4 pt-3 border-top border-secondary border-opacity-25 text-start">
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">+15</h4>
+              <small class="text-secondary">Años de experiencia</small>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">100%</h4>
+              <small class="text-secondary">Docentes nativos / C2</small>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">+20k</h4>
+              <small class="text-secondary">Estudiantes graduados</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elemento Visual Atractivo (Tarjeta Glassmorphism / SVG) -->
+        <div class="col-lg-5">
+          <div class="glass-card p-4 p-md-5 rounded-4 shadow-lg text-center position-relative">
+            <div class="icon-shape bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center fs-2 shadow">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <h3 class="fw-bold text-white mb-2">Examen de Ubicación</h3>
+            <p class="text-light text-opacity-75 small mb-4">
+              ¿Ya tienes conocimientos previos? Mide tu nivel mediante el examen de Cambridge (A1 a C2) de forma gratuita.
+            </p>
+            <a href="#examen" class="btn btn-success text-light fw-bold w-100 py-3 rounded-3 shadow-sm">
+              Rendir Examen Gratis
+            </a>
+          </div>
         </div>
       </div>
     </div>
